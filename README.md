@@ -40,3 +40,4 @@ class MyApp extends StatelessWidget {
 when a person/client or whichever tries to access our application, the entry point is the main function which in turns calls our MyApp class.
 
 `runApp` task is to set up the flutter framework and run the selected application.
+
