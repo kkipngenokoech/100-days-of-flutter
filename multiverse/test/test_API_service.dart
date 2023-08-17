@@ -1,5 +1,6 @@
-import '../api/api_service.dart';
-import '../models/todo_model.dart';
+import 'package:multiverse/api/api_service.dart';
+
+import '../lib/models/todo_model.dart';
 import 'dart:convert';
 
 void main() async {

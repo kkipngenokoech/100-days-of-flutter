@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:multiverse/screens/listview/listview.dart';
 import 'package:multiverse/screens/listview/listviewseperated.dart';
 import 'package:multiverse/screens/listview/lsitviewbuilder.dart';
+import 'package:multiverse/screens/todo/todo_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ListViewWidget(),
+      home: const TodoModelWidget(),
     );
   }
 }
