@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "267595017829",
+    "project_id": "multiverse-flutter",
+    "storage_bucket": "multiverse-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267595017829:android:48294d747dd7eb8469608c",
+        "android_client_info": {
+          "package_name": "com.example.multiverse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267595017829-4oo4s7d3dg3u3o01sk9mvu0cjs2pnl2n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANZrEP1VGD-X1ldoYvMvSzlpYMUgrXJgE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267595017829-4oo4s7d3dg3u3o01sk9mvu0cjs2pnl2n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
