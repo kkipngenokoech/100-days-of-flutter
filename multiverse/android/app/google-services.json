@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "267595017829",
-    "project_id": "multiverse-flutter",
-    "storage_bucket": "multiverse-flutter.appspot.com"
+    "project_number": "352939465218",
+    "project_id": "flutter-multiverse",
+    "storage_bucket": "flutter-multiverse.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:267595017829:android:48294d747dd7eb8469608c",
+        "mobilesdk_app_id": "1:352939465218:android:bc90bba8867705c085a51b",
         "android_client_info": {
           "package_name": "com.example.multiverse"
         }
       },
       "oauth_client": [
         {
-          "client_id": "267595017829-4oo4s7d3dg3u3o01sk9mvu0cjs2pnl2n.apps.googleusercontent.com",
+          "client_id": "352939465218-526kbffq9pqgf6q78en810c0tnsbri7i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyANZrEP1VGD-X1ldoYvMvSzlpYMUgrXJgE"
+          "current_key": "AIzaSyBa9pb7TG-pWtryjisg_OqyxuSEZF6rvcc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "267595017829-4oo4s7d3dg3u3o01sk9mvu0cjs2pnl2n.apps.googleusercontent.com",
+              "client_id": "352939465218-526kbffq9pqgf6q78en810c0tnsbri7i.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

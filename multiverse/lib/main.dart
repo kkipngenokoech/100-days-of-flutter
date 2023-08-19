@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:multiverse/screens/firebase/firebase.dart';
 import 'package:multiverse/screens/listview/listview.dart';
 import 'package:multiverse/screens/listview/listviewseperated.dart';
 import 'package:multiverse/screens/listview/lsitviewbuilder.dart';
 import 'package:multiverse/screens/todo/todo_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -36,7 +41,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const TodoModelWidget(),
+      home: const FirebaseDataWidgetScreen(),
     );
   }
 }
@@ -60,18 +65,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -112,15 +106,16 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             ListViewWidget(),
             ListViewBuilderWidget(),
-            ListViewSeparatedWidget()
+            ListViewSeparatedWidget(),
+            TodoModelWidget()
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // floatingActionButton: FloatingActionButton(
+      //   // onPressed: '_incrementCounter',
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
