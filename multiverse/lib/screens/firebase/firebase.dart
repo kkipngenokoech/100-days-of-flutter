@@ -25,10 +25,13 @@ class FirebaseDataWidgetScreen extends StatelessWidget {
             itemCount: players.length,
             itemBuilder: (context, index){
               Player player = players[index];
-              return ListTile(
-                title: Text(player.name),
-                subtitle: Text(player.team),
+              return Center(
+                child: ListTile(
+                  title: Text(player.name),
+                  subtitle: Text(player.team),
+                )
               );
+                
             },
           );
         })
