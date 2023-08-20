@@ -65,11 +65,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
   final List<Widget> _screens = [
-    const ListViewWidget(),
-    const FirebaseDataWidgetScreen(),
-    const ListViewBuilderWidget(),
-    const ListViewSeparatedWidget(),
-    const TodoModelWidget(),
+    ListViewWidget(),
+    FirebaseDataWidgetScreen(),
+    ListViewBuilderWidget(),
+    ListViewSeparatedWidget(),
+    TodoModelWidget(),
   ];
   @override
   Widget build(BuildContext context) {

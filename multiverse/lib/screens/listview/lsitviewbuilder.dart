@@ -6,9 +6,7 @@ class ListViewBuilderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const title = 'List View index';
-    return MaterialApp(
-      title: title,
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: const Text(title),
         ),
@@ -20,7 +18,6 @@ class ListViewBuilderWidget extends StatelessWidget {
             );
           },
         ),
-      ),
     );
   }
 }
