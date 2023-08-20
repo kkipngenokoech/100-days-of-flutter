@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_image/network.dart';
 import 'package:multiverse/api/firestore_service.dart';
 import 'package:multiverse/models/player_model.dart';
 
@@ -27,8 +28,21 @@ class FirebaseDataWidgetScreen extends StatelessWidget {
               Player player = players[index];
               return Center(
                 child: ListTile(
+                  leading: SizedBox(
+                    width: 56,
+                    height: 56,
+                    child:  Image(
+                      image: NetworkImageWithRetry(player.imageUrl),
+                    ),
+                  ),
                   title: Text(player.name),
-                  subtitle: Text(player.team),
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(player.team),
+                      Text('Position: ${player.position}'),
+                    ]
+                )
                 )
               );
                 
