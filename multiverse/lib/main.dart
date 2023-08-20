@@ -6,8 +6,7 @@ import 'package:multiverse/screens/listview/lsitviewbuilder.dart';
 import 'package:multiverse/screens/todo/todo_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MyApp());
@@ -20,7 +19,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
@@ -41,7 +39,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const FirebaseDataWidgetScreen(),
+      home: const MyHomePage(title: "Hello World"),
     );
   }
 }
@@ -65,8 +63,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
+  int _currentIndex = 0;
+  final List<Widget> _screens = [
+    const ListViewWidget(),
+    const FirebaseDataWidgetScreen(),
+    const ListViewBuilderWidget(),
+    const ListViewSeparatedWidget(),
+    const TodoModelWidget(),
+  ];
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -85,37 +89,28 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: const Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ListViewWidget(),
-            ListViewBuilderWidget(),
-            ListViewSeparatedWidget(),
-            TodoModelWidget()
+      body: _screens[_currentIndex],
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentIndex,
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.memory), label: 'firebase'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.list), label: "List view builder"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.list_alt_outlined), label: 'list builder'),
+            BottomNavigationBarItem(icon: Icon(Icons.schedule), label: 'todo')
           ],
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          selectedItemColor: Colors.amber,
+          unselectedItemColor: Colors.grey,
         ),
-      ),
-      // floatingActionButton: FloatingActionButton(
-      //   // onPressed: '_incrementCounter',
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
