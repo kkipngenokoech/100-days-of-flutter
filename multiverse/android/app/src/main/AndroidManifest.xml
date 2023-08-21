@@ -2,7 +2,8 @@
     <application
         android:label="multiverse"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@drawable/custom_app_icon">
+        <!-- android:icon="@mipmap/ic_launcher"> -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
