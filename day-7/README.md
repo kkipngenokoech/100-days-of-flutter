@@ -29,4 +29,3 @@ This plugin provides the infrastructure the app will need to let the user add av
 ## flutter_calendar_carousel
 
 This widget provides the calendar and functionality for the appointments list screen
-
