@@ -20,4 +20,3 @@ material app can be used to setup core items like:
 1. title
 2. theme
 3. home (initial route of the app)
-
