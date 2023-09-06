@@ -95,3 +95,53 @@ the familar loops you hae always used:
 
 ## classes
 
+dart is object oriented - that means we are dealing with classes and objects.
+
+defining a class in dart is simple:
+
+```dart
+class Hero {
+
+}
+```
+
+### instance variables
+
+these are the members/properties of a class, to define them is really simple:
+
+```dart
+class SuperHero {
+    String name;
+}
+```
+
+Any instance variable that you don’t initialize with a value begins with a value of null. Dart will automatically generate a getter (accessor) method for each variable, and it will also generate a setter (mutator) for any non-final variables.
+
+Instance variables and methods can be marked as static as well, which means you can use them without instantiating the class
+
+## methods
+
+this are class member functions, called methods:
+
+```dart
+class Hero {
+    String GetSuperHero(){} 
+}
+```
+
+## constructors
+
+constructors are great methods that are used to create and initialize objects in a class. If you don't define a constructor for your class, dart will automatically define one for you with no parameters.
+
+constructors help you to set the values of variables, or members of your class at first instance.
+
+dart way of setting constructors is:
+
+```dart
+class Hero {
+    String firstName;
+    String superPower;
+
+    Hero ({this.firstName, this.superPower})
+}
+```
