@@ -1,5 +1,9 @@
 # BLOC   - BUSINESS LOGIC
 
+BloC takes input events and produce output states   
+
+events are inputs to the BloC, they are dispatched in response to user interactions 
+
 blocs are used for two main reasons:
 
 1. their public api consists of simple outputs and inputs
