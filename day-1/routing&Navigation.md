@@ -39,3 +39,21 @@ title: Text("Second Screen"),
 ```
 
 to navigate back, we use `Navigator.pop()`
+
+
+## NAVIGATOR CLASS
+
+pushing and popping routes is the bread and butter of routing in flutter. Navigator class lays its children out in a stack nature.
+
+it operates in a last in first out principle. we need to manage this stack and we can do that in the following ways:
+
+1. pop
+2. popUntil
+3. canPop
+4. push
+5. pushNamed
+6. popAndPushNamed
+7. replace
+8. pushAndRemoveUntil
+
+pushing named routes, returns a future
