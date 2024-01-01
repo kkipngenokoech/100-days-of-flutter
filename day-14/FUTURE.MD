@@ -2,7 +2,11 @@
 
 in flutter, future and streams are the main tools for dealing with asynchronous code/ programming
 
-while future represents a single value that will be delivered at a later time in the future, Stream is a set of values that can be 
+while future represents a single value that will be delivered at a later time in the future, Stream is a set of values that can be delivered asycnhronously, at any time. - a continous flow of data.
+
+in order to get data from a stream, you need to subscribe/listen to it.
+
+Both futures and streams can generate both data and errors.
 
 future is the foundational class for all dart async programming
 
